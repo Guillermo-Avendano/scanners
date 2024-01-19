@@ -12,7 +12,7 @@ export JAVA_HOME="${javahome}"
    
 SCNBIN="${instdir}\bin"
 ROC="${rocbase}/bin"
-CP1="$ROC/rochade.jar":"$ROC/js.jar":"$ROC/ScanLogging.jar":"$ROC/roacccxj.jar":"${instdir}/bin/scansqlsrvr.jar":"$SCNBIN/SQLPostProcess.jar":"${instdir}/bin/rochade_ui.jar"
+CP1="$ROC/rochade.jar":"$ROC/js.jar":"$ROC/ScanLogging.jar":"$ROC/roacccxj.jar":"${rocbase}/bin/scansqlsrvr.jar":"$SCNBIN/SQLPostProcess.jar":"${instdir}/bin/rochade_ui.jar"
 CP2="$SCNBIN/ScannerUtils.jar":"$SCNBIN/SQL2XML.jar":"$SCNBIN/ds-utils.jar":"$SCNBIN/json.jar":"${rocbase}/scansqlsrvr/V203/bin/ds-utils.jar"
 
    
