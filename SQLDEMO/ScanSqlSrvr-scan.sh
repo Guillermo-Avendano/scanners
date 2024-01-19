@@ -8,7 +8,10 @@
 echo -------------------------------------------------------------------------
 echo SCANSQLSRVR version 2.03 DB Scanner
 echo -------------------------------------------------------------------------
-
+export logdir=/home/rocket/.jenkins/workspace/scanners/scanners/SQLDEMO
+export tmpdir=/home/rocket/.jenkins/workspace/scanners/scanners/SQLDEMO
+export workdir=/home/rocket/.jenkins/workspace/scanners/scanners/SQLDEMO
+export outprefix=SqlDB
 export JAVA_HOME="${javahome}"
 
 ROC_BIN="${rocbase}/bin"
