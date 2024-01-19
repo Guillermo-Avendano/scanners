@@ -5,9 +5,9 @@
 #  * This program is protected by U.S. and international copyright laws.     * #
 #  --------------------------------------------------------------------------- #
 
-INPUT="${xml-file}"
+INPUT="SqlDb.xml"
 TARGET="${use-appl_appl-url}"
-EXMOD="${instdir}/schema/SQL_exchModel.xml"
+EXMOD="${rocbase}/scansqlsrvr/V203/schema/SQL_exchModel.xml"
 
 
 export JAVA_HOME="${javahome}"
@@ -21,10 +21,10 @@ echo Begin: $(date)
 echo
 echo importing    : $INPUT
 echo into         : $TARGET
-echo options      : -m="$EXMOD" -i="$INPUT" -t="$TARGET?pwd=%24%7Buse-appl_password%7D" -me=999999 --isThrowingExceptionOnDeferredError=off -ps="${accfile}" -g="${xml-file}.import.log" -ga=on
+echo options      : -m="$EXMOD" -i="$INPUT" -t="$TARGET?pwd=%24%7Buse-appl_password%7D" -me=999999 --isThrowingExceptionOnDeferredError=off -ps="${accfile}" -g="SqlDb.xml.import.log" -ga=on
 echo Java options : -Xmx1024m -Djava.library.path="$BIN" -Djava.util.logging.config.file="${cmdprefix}-import-log.properties"
 
-"$JAVA_HOME/bin/java" -cp "$CP" -Xmx1024m -Djava.library.path="$BIN" -Djava.util.logging.config.file="${cmdprefix}-import-log.properties" de.rochade.xml.XmlImporter -m="$EXMOD" -i="$INPUT" -t="$TARGET?pwd=%24%7Buse-appl_password%7D" -me=999999 --isThrowingExceptionOnDeferredError=off -ps="${accfile}" -g="${xml-file}.import.log" -ga=on 2>&1
+"$JAVA_HOME/bin/java" -cp "$CP" -Xmx1024m -Djava.library.path="$BIN" -Djava.util.logging.config.file="${cmdprefix}-import-log.properties" de.rochade.xml.XmlImporter -m="$EXMOD" -i="$INPUT" -t="$TARGET?pwd=%24%7Buse-appl_password%7D" -me=999999 --isThrowingExceptionOnDeferredError=off -ps="${accfile}" -g="SqlDb.xml.import.log" -ga=on 2>&1
 RC="$?"
 echo End: $(date)
 
