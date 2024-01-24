@@ -5,7 +5,7 @@
 #  * This program is protected by U.S. and international copyright laws.     * #
 #  --------------------------------------------------------------------------- #
 #
-cd ${0%/*}
+#cd ${0%/*}
 #
 # Initialize DWRT environment
 #
