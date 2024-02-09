@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+#  *************************************************************************** #
+#  * Copyright (c) 1983-2024 Rocket Software, Inc. or its affiliates.       * #
+#  * All rights reserved.                                                    * #
+#  * This program is protected by U.S. and international copyright laws.     * #
+#  *************************************************************************** #
+-->
+<XMI xmlns="x-schema:RNX_1_2.xdr" xmi.version="1.0">
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>Rochade Exporter</XMI.exporter>
+      <XMI.exporterVersion>2.0</XMI.exporterVersion>
+    </XMI.documentation>
+    <XMI.metamodel xmi.name="XMI.Rochade" xmi.version="1.0"/>
+  </XMI.header>
+    <XMI.content uuidDel="|">
+      <DATASPACE Name="XML Default">
+        <SERVERS>
+          <SERVER Name="SERVER1"/>
+        </SERVERS>
+      </DATASPACE>
+      <CONTROLSPACE>
+        <SERVERS>
+          <SERVER Name="SERVER1">
+            <DATABASES>
+              <!-- *************************************************** -->
+              <!-- Please adjust the control database, if not standard -->
+              <!-- *************************************************** -->
+             <DATABASE Name="AP-DATA">  
+                <USERS>
+                  <USER>
+                    <APPLICATIONS>
+                      <!-- ******************************************************************************* -->
+                      <!-- Please adjust the Reconciliation Toolsets control subject area, if not standard -->
+                      <!-- ******************************************************************************* -->
+                        <APPLICATION applType="RTC" Name="RRT-CONTROL" Version="USER"/> 
+                    </APPLICATIONS>
+                  </USER>
+                </USERS>
+              </DATABASE>
+            </DATABASES>
+          </SERVER>
+        </SERVERS>
+      </CONTROLSPACE>
+      <!-- ******************************************** -->
+      <!-- Please adjust the Rochade Server parameters  -->
+      <!-- ******************************************** -->
+      <SERVER Name="SERVER1" host="di-server" port="8888"/>    
+    </XMI.content>
+</XMI>
+
+
